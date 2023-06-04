@@ -1,0 +1,54 @@
+body {
+  background-image: url("../images/movie-detail-bg.png");
+  background-size: cover;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 70px;
+  background-color: rgba(242, 242, 242, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+ {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+

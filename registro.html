@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrarse</title>
+  <link rel="stylesheet" type="text/css" href="css\style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registrarse</h1>
+    <form id="registerForm" class="grid-form">
+      <label for="username">Nombre de usuario:</label>
+      <input type="text" id="username" required>
+
+      <label for="realname">Nombre real:</label>
+      <input type="text" id="realname" required>
+
+      <label for="birthdate">Fecha de nacimiento (dd/mm/aaaa):</label>
+      <input type="text" id="birthdate" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" required>
+
+      <label for="password">Contraseña (nueva contraseña):</label>
+      <input type="password" id="password" required>
+
+      <label for="confirmPassword">Contraseña (confirmar):</label>
+      <input type="password" id="confirmPassword" required>
+
+      <label for="newsletter">Deseo recibir información sobre novedades y ofertas:</label>
+      <input type="checkbox" id="newsletter" checked>
+
+      <label for="terms">Declaro haber leído y acepto las condiciones generales del programa y la normativa sobre protección de datos:</label>
+      <input type="checkbox" id="terms" required>
+
+      <button type="submit">Registrarse</button>
+    </form>
+    <button onclick="goBack()">Volver atrás</button>
+  </div>
+
+  <script src="js/registro.js"></script>
+
+</body>
+</html>

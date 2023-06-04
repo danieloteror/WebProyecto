@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Menú</title>
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><b>MovieMingle</b></h1>
+    <h2>Descubre, conecta y disfruta del mundo del cine con MovieMingle.</h2>
+    <img src="images/Designer.jpeg" alt="Volver atrás" style="width: 60px; height: 60px;">
+  </header>
+
+  <nav>
+    <div class="menu-left">
+      <input type="text" id="barra-busqueda" placeholder="Buscar películas por nombre">
+      <button onclick="searchMovies">
+        <img src="" alt="Icono de Buscar">
+      </button>
+    </div>
+    <div class="menu-right">
+      <button onclick="logout()" class="back-button">
+        <img src="images/salida.png" alt="Icono de Salir" style="width: 60px; height: 60px;">
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="movies">
+      <!-- Aquí se generarán las tarjetas de las películas dinámicamente desde JavaScript -->
+    </div>
+  </div>
+
+  <script src="js\script.js"></script> 
+
+</body>
+</html>
