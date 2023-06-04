@@ -38,9 +38,13 @@ registerForm.addEventListener('submit', function(event) {
 
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
-
-
-  addUser(username, password);
+  var password2 = document.getElementById('confirmPassword').value;
+  if (password==password2) {
+    addUser(username, password);
+  } else {
+    alert('Las contraseñas no coinciden');
+      return;
+  }
 
  
   window.location.href = 'login.html';

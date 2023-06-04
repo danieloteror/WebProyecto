@@ -139,50 +139,52 @@ function redirectToMoviePage(movie) {
 generateMovieCards();
 
 
+// Función para buscar películas por título
 function searchMovies() {
-
-  var searchTerm = document.getElementById("search-input").value.toLowerCase();
-
-
-  var moviesContainer = document.querySelector(".movie-tittle");
-
-
-  moviesContainer.innerHTML = "";
-
- 
-  var filteredMovies = movies.filter(function(movie) {
-    return movie.title.toLowerCase().includes(searchTerm);
-  });
-
+  var searchInput = document.getElementById("barra-busqueda").value.toLowerCase();
+  var moviesContainer = document.querySelector(".movies");
   
+  // Limpia las tarjetas de películas existentes
+  moviesContainer.innerHTML = "";
+  
+  // Filtra las películas que coincidan con el término de búsqueda
+  var filteredMovies = movies.filter(function(movie) {
+    return movie.title.toLowerCase().includes(searchInput);
+  });
+  
+  // Genera las tarjetas de las películas filtradas
   filteredMovies.forEach(function(movie) {
     var movieCard = document.createElement("div");
     movieCard.classList.add("movie-card");
-
-  
+    
+    // Crea los elementos de la tarjeta de la película
     var movieTitle = document.createElement("h2");
     movieTitle.textContent = movie.title;
-
+    
     var movieImage = document.createElement("img");
     movieImage.src = movie.image;
-
+    
     var movieDescription = document.createElement("p");
     movieDescription.textContent = movie.description;
-
-  
+    
+    // Agrega los elementos a la tarjeta de la película
     movieCard.appendChild(movieTitle);
     movieCard.appendChild(movieImage);
     movieCard.appendChild(movieDescription);
-
-   
+    
+    // Agrega la tarjeta de la película al contenedor
     moviesContainer.appendChild(movieCard);
-
-   
-    movieCard.addEventListener("searchMovies", function() {
+    
+    // Agrega un evento de clic a la tarjeta para redirigir a la página genérica de película y pasar los datos
+    movieCard.addEventListener("click", function() {
       redirectToMoviePage(movie);
     });
   });
 }
+
+// Llama a la función para generar las tarjetas de las películas
+generateMovieCards();
+
 function logout() {
   window.location.href = "login.html";
 }

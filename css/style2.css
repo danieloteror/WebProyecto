@@ -58,10 +58,6 @@ body {
   background-image: url("../images/movie-detail-bg.png");
   background-size: inherit;
 }
-#barra-busqueda {
-  width: 93%;
-  height: 4%;
-}
 header img {
   position: absolute;
     top: 20px;
@@ -78,5 +74,25 @@ header img {
   border: none;
   padding: 0;
 }
-
+#barra-busqueda {
+  height: 30px;
+  width: 90%;
+  margin-right: 10px;
+}
+.menu-left {
+  display: flex;
+  align-items: center;
+}
+input[type="text"] {
+  height: 40px; /* Ajusta este valor según tu preferencia */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.back-button:hover{
+  cursor: pointer;
+}
+.search-button:hover{
+  cursor: pointer;
+}
 
